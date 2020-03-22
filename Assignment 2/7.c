@@ -27,3 +27,16 @@ int main()
     }
     
     /*Converting fractional part */
+   for (int i = 0; i <= 10; i++)
+   {
+       d[i] = n*5;
+       n = (n*5)-d[i];
+   }
+   printf(".");
+   /* Printing the fractional part */
+    for (int i = 0; i <= 10; i++)
+    {
+        printf("%d",d[i]);
+    }
+    
+}
