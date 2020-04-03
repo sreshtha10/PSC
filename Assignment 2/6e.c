@@ -10,14 +10,14 @@ int main()
     scanf("%d",&x);
     float sum = 0;
     int count = 2;
-    for(int i = 1; i <n;i+=2,count++)
+    for(int i = 1; i <2*n;i+=2,count++)
     {
         int b = 1;
         for(int j = i;j>=1;j--)
         {
             b = b*j;
         }
-        sum=sum + (float)(pow(-1,count)*pow(x,i))/(float)b;
+        sum=sum+(float)(pow(-1,count)*pow(x,i))/(float)b;
     }
     printf("%f",sum);
 }
