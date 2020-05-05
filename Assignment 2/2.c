@@ -1,15 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int marks[50],count[20] = {0};
+    int marks[50],count = 0;
     printf("Enter marks between 0 -20 \n");
-    for (int i = 1; i <= 50; i++)
+    for (int i = 0; i<50; i++)
     {
         scanf("%d",&marks[i]);
-        count[marks[i]]++;
     }
-    for (int i = 1 ; i <=20; i++)
+    for(int i = 0;i<=20;i++)
     {
-        printf("Frequency of %d is %d \n",i,count[i]);
+        count = 0;
+        for(int j = 0;j<50;j++)
+        {
+            if(marks[j] == i)
+            {
+                count++;
+            }
+        }
+        printf("The frequency of %d marks is %d",i,count);
     }
 }
